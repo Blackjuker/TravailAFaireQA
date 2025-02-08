@@ -1,0 +1,10 @@
+# Ignorer les fichiers compilés
+target/
+*.class
+
+# Ignorer les fichiers IDE
+.idea/
+.vscode/
+
+# Ignorer les fichiers système
+.DS_Store
