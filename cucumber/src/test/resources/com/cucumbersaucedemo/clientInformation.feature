@@ -6,6 +6,7 @@ Feature: Envoi des informations client lors du checkout sur SauceDemo
     And il a ajoute deux produits au panier
     And il a accede au formulaire d information client
 
+  @smoke
   Scenario: Remplir et valider le formulaire avec des informations valides
     When il saisit son prenom "Arnaud"
     And il saisit son nom "Ngabgna"

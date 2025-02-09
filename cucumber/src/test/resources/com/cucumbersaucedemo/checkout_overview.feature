@@ -6,6 +6,7 @@ Feature: Vérification des prix dans la page Checkout Overview sur SauceDemo
     And il a ajoute plusieurs produits au panier
     And il a accede a la page de recapitulatif de commande
 
+  @smoke
   Scenario: Verification du total des prix des articles
     When l utilisateur additionne les prix des articles affiches
     Then le total calcule doit correspondre au total affiche sur la page Checkout Overview

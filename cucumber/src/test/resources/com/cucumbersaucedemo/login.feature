@@ -3,6 +3,7 @@ Feature: Test Login
     Background: Nous allons d'abord nous connecter
         When Se connecter au site "https://www.saucedemo.com/"
     
+    @smoke
     Scenario: Connexion réussie avec des identifiants valides
         Given l utilisateur est sur la page de connexion
         When il saisit le nom d utilisateur "standard_user"
@@ -10,6 +11,7 @@ Feature: Test Login
         And il clique sur le bouton de connexion
         Then il doit etre redirige vers la page d inventaire
 
+    @regression
     Scenario: Échec de connexion avec un mot de passe incorrect
         Given l utilisateur est sur la page de connexion
         When il saisit le nom d utilisateur "standard_user"

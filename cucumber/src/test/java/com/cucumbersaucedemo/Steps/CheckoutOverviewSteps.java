@@ -6,7 +6,6 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
-import org.openqa.selenium.WebDriver;
 
 import com.cucumbersaucedemo.Pages.CartPage;
 import com.cucumbersaucedemo.Pages.CheckOutOverview;
