@@ -14,6 +14,6 @@ public class Hook {
 
     @After
     public void DeleteConfiguration(){
-        WebDriverTools.tearDown();
+      //  WebDriverTools.tearDown();
     }
 }

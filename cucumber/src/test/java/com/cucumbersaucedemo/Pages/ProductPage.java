@@ -1,11 +1,16 @@
 package com.cucumbersaucedemo.Pages;
 
+import java.time.Duration;
 import java.util.List;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import com.cucumbersaucedemo.Tools.WebDriverTools;
 
 public class ProductPage {
   @FindBy(className = "inventory_item_name")
@@ -24,7 +29,7 @@ public class ProductPage {
     private WebElement cartButtonElement;
 
     @FindBy(css = ".cart_button")
-    private List<WebElement> listButtonInCartsElements;
+    private List<WebElement> listRemoveButtonInCartsElements;
 
   
 
@@ -35,6 +40,7 @@ public class ProductPage {
     }
 
     public void ClicAddOrRemoveProduitDansPanier(int index){
+        System.out.println("--------------------"+listButtonAddToCartsElements.get(index).getText());
         listButtonAddToCartsElements.get(index).click();
     }
 
@@ -59,6 +65,9 @@ public class ProductPage {
     }
 
     public void RemoveProduitInCart(int index){
-        listButtonInCartsElements.get(index).click();
+          WebDriverWait wait = new WebDriverWait(WebDriverTools.GetWebDriver(), Duration.ofSeconds(5));
+            wait.until(ExpectedConditions.visibilityOf(listRemoveButtonInCartsElements.get(index)));
+            System.out.println(listRemoveButtonInCartsElements.get(index).getText());
+            listRemoveButtonInCartsElements.get(index).click();
     }
 }
