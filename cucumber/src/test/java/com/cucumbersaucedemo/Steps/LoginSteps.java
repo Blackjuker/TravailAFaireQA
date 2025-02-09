@@ -62,6 +62,18 @@ public class LoginSteps {
         assertEquals(s, loginPage.RecuperationMessageErreurLogin());
     }
 
+    @Then("l utilisateur doit etre redirige vers la page d inventaire sauf pour {string}")
+    public void utilisateurRedirigeOuErreur(String username) {
+        if (username.equals("locked_out_user")) {
+            String expectedError = "Epic sadface: Sorry, this user has been locked out.";
+            assertEquals(expectedError, loginPage.RecuperationMessageErreurLogin(),
+                    "Message d'erreur incorrect pour un utilisateur bloqué.");
+        } else {
+            assertTrue(WebDriverTools.GetWebDriver().getCurrentUrl().contains("/inventory.html"),
+                    "Échec de connexion : URL actuelle = " + WebDriverTools.GetWebDriver().getCurrentUrl());
+        }
+    }
+
     
 
 
