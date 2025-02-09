@@ -39,7 +39,7 @@ public class ClientCheckoutInformationSendTest {
             e.printStackTrace();
         }
         if (driver!=null){
-          //  driver.quit();
+            driver.quit();
         }
     }
 
