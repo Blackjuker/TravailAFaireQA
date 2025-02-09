@@ -27,8 +27,7 @@ public class ProductPage {
     @FindBy(css = ".cart_button")
     private List<WebElement> listButtonInCartsElements;
 
-    @FindBy(id="checkout")
-    private WebElement CartButtonElement;
+  
 
 
 
