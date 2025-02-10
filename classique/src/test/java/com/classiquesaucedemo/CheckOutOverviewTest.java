@@ -53,7 +53,7 @@ public class CheckOutOverviewTest {
 
 
     @Test
-    @Tag("Test_SommePrixArticleEgalTotalPrixArticle")
+    @Tag("TC-PrixArticle")
     public void Test_SommePrixArticleEgalTotalPrixArticle(){
         BigDecimal prixDesArticles = checkOutOverview.AdditionTotalPrixItem();
         BigDecimal taxe = new BigDecimal(3.20);

@@ -36,7 +36,7 @@ public class LoginTest {
     }
 
     @Test
-    @Tag("test_username_et_password_ok_VALID")
+    @Tag("TC-LoginValid")
     public void SeConnecterAvecLeBonUsernameEtPassword(){
         loginPage.SaisirUsername("standard_user");
         loginPage.SaisirPassword("secret_sauce");
@@ -45,7 +45,7 @@ public class LoginTest {
     }
 
     @Test
-    @Tag("test_username_et_password_INVALID")
+    @Tag("TC-LoginInvalid")
     public void EchecDeConnexionMotDePasseIncorrect(){
         loginPage.SaisirUsername("standard_user");
         loginPage.SaisirPassword("sxcvcxdsfsdfsf");

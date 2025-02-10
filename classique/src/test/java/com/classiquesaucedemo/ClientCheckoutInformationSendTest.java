@@ -45,7 +45,7 @@ public class ClientCheckoutInformationSendTest {
 
 
     @Test
-    @Tag("remplir_formulaire_valid")
+    @Tag("TC-ValidFormulaire")
     public void Remplir_Formulaire_Valide(){
         clientInformationPage.SaisirFirstName("Arnaud");
         clientInformationPage.SaisirLastName("Ngabgna");

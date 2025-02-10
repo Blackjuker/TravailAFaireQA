@@ -42,7 +42,7 @@ public class ProduitTest {
 
     //definition des tests
     @Test
-    @Tag("Verif_prixhorsPanier_egal_prixDansPanier")
+    @Tag("TC-PrixVerif")
     public void VerifPrixHorsPanierEgalPrixDansPanier(){
         // ajout d'un produit à la position 0
         String prix = productPage.GetPrixProduit(0);
@@ -61,7 +61,7 @@ public class ProduitTest {
     }
 
     @Test
-    @Tag("Suppression_article_du_panier")
+    @Tag("TC-DeleteArticle")
     public void Suppression_article_du_panier(){
         productPage.ClicAddOrRemoveProduitDansPanier(0);
 
