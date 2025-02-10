@@ -25,7 +25,7 @@ public class Hook {
 
     @AfterStep
     public void captureScreenshot(Scenario scenario){
-      if (!scenario.isFailed()) {  // Vérifie si le test a échoué
+      if (scenario.isFailed()) {  // Vérifie si le test a échoué
             WebDriver driver = WebDriverTools.GetWebDriver();
             byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
             scenario.attach(screenshot, "image/png", "Capture d'écran");

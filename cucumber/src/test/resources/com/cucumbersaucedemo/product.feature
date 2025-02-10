@@ -13,7 +13,7 @@ Feature: Gestion des produits dans le panier sur SauceDemo
     When il ouvre le panier
     Then le prix du produit dans le panier doit etre identique au prix affiche sur la page produit
 
-  @smoke
+  @functional
   Scenario: Suppression d un article du panier
     When l utilisateur ajoute le premier produit au panier
     And il ouvre le panier
